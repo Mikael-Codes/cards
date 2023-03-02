@@ -8,6 +8,9 @@ import Counter from "@components/Counter";
 import { CardType, HistoryType, ResultType, SwipeType } from "types";
 import Card from "@components/Card";
 import Head from "next/head";
+require('dotenv').config()
+
+
 var Airtable = require('airtable');
 const ApiKey = process.env.REACT_APP_AIRTABLE_API_KEY
 

@@ -1,6 +1,9 @@
 {
   "name": "framer-cards",
   "version": "0.1.0",
+  "browser": {
+    "fs": false
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,6 +14,7 @@
   },
   "dependencies": {
     "airtable": "^0.11.6",
+    "dotenv": "^16.0.3",
     "framer-motion": "^7.2.1",
     "next": "12.2.5",
     "react": "18.2.0",
