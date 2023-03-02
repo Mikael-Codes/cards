@@ -1,12 +1,13 @@
 const CARDS = [
-  { id: 0, emoji: "🍅", name: "Tomato", color: "#E42100" },
-  { id: 1, emoji: "🍊", name: "Tangerine", color: "#F36000" },
-  { id: 2, emoji: "🍋", name: "Lemon", color: "#F3BC00" },
-  { id: 3, emoji: "🍐", name: "Pear", color: "#A0A226" },
-  { id: 4, emoji: "🥬", name: "Lettuce", color: "#349B19" },
-  { id: 5, emoji: "🫐", name: "Blueberries", color: "#70BBFF" },
-  { id: 6, emoji: "🍆", name: "Eggplant", color: "#7F4877" },
-  { id: 7, emoji: "🍇", name: "Grapes", color: "#BC2A6E" },
+  { id: 0, image:'https://randomuser.me/api/portraits/men/8.jpg', emoji: "🍅", name: "Tomato", color: "#E42100", text1:"text1", text2:"text2"},
+  { id: 1, image:'https://randomuser.me/api/portraits/men/8.jpg', emoji: "🍅", name: "Tomato2", color: "#E42100", text1:"text1", text2:"text2"},
+  { id: 2, image:'https://randomuser.me/api/portraits/men/8.jpg', emoji: "🍅", name: "Tomato3", color: "#E42100", text1:"text1", text2:"text2"},
+  { id: 3, image:'https://randomuser.me/api/portraits/men/8.jpg', emoji: "🍅", name: "Tomato4", color: "#E42100", text1:"text1", text2:"text2"},
+  { id: 4, image:'https://randomuser.me/api/portraits/men/8.jpg', emoji: "🍅", name: "Tomato5", color: "#E42100", text1:"text1", text2:"text2"},
+  { id: 5, image:'https://randomuser.me/api/portraits/men/8.jpg', emoji: "🍅", name: "Tomato6", color: "#E42100", text1:"text1", text2:"text2"},
+  { id: 6, image:'https://randomuser.me/api/portraits/men/8.jpg', emoji: "🍅", name: "Tomato7", color: "#E42100", text1:"text1", text2:"text2"},
+  { id: 7, image:'https://randomuser.me/api/portraits/men/8.jpg', emoji: "🍅", name: "Tomato8", color: "#E42100", text1:"text1", text2:"text2"},
+ 
 ];
 
 export default CARDS;

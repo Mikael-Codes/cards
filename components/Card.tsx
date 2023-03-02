@@ -8,7 +8,7 @@ const Card: React.FC<CardProps> = ({ card, removeCard, active }) => {
   const onDragEnd = (_e: any, info: PanInfo) => {
     if (info.offset.y < -100) {
       setLeaveY(-2000);
-      removeCard(card, "superlike");
+      removeCard(card, "like"); // All likes for now
       return;
     }
     if (info.offset.x > 100) {
@@ -17,14 +17,15 @@ const Card: React.FC<CardProps> = ({ card, removeCard, active }) => {
     }
     if (info.offset.x < -100) {
       setLeaveX(-1000);
-      removeCard(card, "nope");
+      removeCard(card, "like");
     }
   };
-  const classNames = `absolute h-[430px] w-[300px] bg-white shadow-xl rounded-2xl flex flex-col justify-center items-center cursor-grab`;
+  const classNames = `absolute h-[480px] w-[300px] card-bg shadow-xl rounded-2xl flex flex-col justify-center items-center cursor-grab card-holder`;
   return (
     <>
       {active ? (
         <motion.div
+          
           drag={true}
           dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
           onDragEnd={onDragEnd}
@@ -33,7 +34,7 @@ const Card: React.FC<CardProps> = ({ card, removeCard, active }) => {
           }}
           animate={{
             scale: 1.05,
-            rotate: `${card.name.length % 2 === 0 ? 6 : -6}deg`,
+            rotate: `${card.text2.length % 2 === 0 ? 4 : -4}deg`,
           }}
           exit={{
             x: leaveX,
@@ -45,8 +46,11 @@ const Card: React.FC<CardProps> = ({ card, removeCard, active }) => {
           className={classNames}
           data-testid="active-card"
         >
-          <Emoji label={card.name} emoji={card.emoji} />
-          <Title title={card.name} color={card.color} />
+          <img className='card-img' src ={card.image} />
+          {/* <Title title={card.name} color={card.color} /> */}
+          <p className='card-text' style={{textAlign: 'left' }}>{card.text1}</p>
+          <p className='card-text' style={{textAlign: 'left', fontStyle:"italic" }}>{card.text2}</p>
+
         </motion.div>
       ) : (
         <div
@@ -54,8 +58,10 @@ const Card: React.FC<CardProps> = ({ card, removeCard, active }) => {
             card.name.length % 2 === 0 ? "rotate-6" : "-rotate-6"
           }`}
         >
-          <Emoji label={card.name} emoji={card.emoji} />
-          <Title title={card.name} color={card.color} />
+          <img className='card-img' src ={card.image} />
+          {/* <Title title={card.name} color={card.color} /> */}
+          <p className='card-text' style={{textAlign: 'left' }}>{card.text1}</p>
+          <p className='card-text'>{card.text2}</p>
         </div>
       )}
     </>

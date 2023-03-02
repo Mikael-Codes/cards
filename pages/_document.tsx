@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta
           name="description"
-          content="Implementation of Tinder cards swipe with Framer Motion"
+          content="A variant of Ungame"
         />
       </Head>
       <body>

@@ -17,3 +17,33 @@ body {
 .gradient{
   background: linear-gradient(180deg, #7700ff 0%, rgb(68, 0, 255) 100%);
 }
+
+.card-holder
+{
+  border-width: 4px;
+  border-color: rgb(240, 150, 40);
+  justify-content: flex-start;
+  padding-top: 20px;
+  gap:10px;
+}
+
+.card-img {
+  pointer-events: none;
+  height:256px;
+  width:256px;
+  border-width: 2px;
+  border-color: brown;
+
+}
+
+.card-text {
+  padding-left: 18px;
+  padding-right: 18px;
+
+  text-align: left;
+
+}
+
+.card-bg {
+  background-color: rgb(251, 251, 181);
+}
