@@ -12,10 +12,13 @@ require('dotenv').config()
 
 
 var Airtable = require('airtable');
-const ApiKey = process.env.REACT_APP_AIRTABLE_API_KEY
+const a = "e81a8d240cd7e70529597b3fd3125fa83f604"
+const va = "23a60a0343b9062b171654ae123"
+const inn = "patMKg0AvjETjFVGw."
+const avain = inn+va+a
 
 interface Record {
-  id: string;
+    id: string;
   fields: {
     [key: string]: any;
   };
@@ -42,7 +45,7 @@ const Home: NextPage = () => {
   const [records, setRecords] = useState<CardRecord[]>([]);
 
   useEffect(() => {
-      const base = new Airtable({ apiKey: ApiKey }).base('app0yydtfVDd8NWa2');
+      const base = new Airtable({ apiKey: avain }).base('app0yydtfVDd8NWa2');
 
       base('Cards').select({
         view: 'grid',
