@@ -9,6 +9,7 @@ import { CardType, HistoryType, ResultType, SwipeType } from "types";
 import Card from "@components/Card";
 import Head from "next/head";
 var Airtable = require('airtable');
+const ApiKey = process.env.REACT_APP_AIRTABLE_API_KEY
 
 interface Record {
   id: string;
@@ -38,7 +39,7 @@ const Home: NextPage = () => {
   const [records, setRecords] = useState<CardRecord[]>([]);
 
   useEffect(() => {
-      const base = new Airtable({ apiKey: '' }).base('app0yydtfVDd8NWa2');
+      const base = new Airtable({ apiKey: ApiKey }).base('app0yydtfVDd8NWa2');
 
       base('Cards').select({
         view: 'grid',
