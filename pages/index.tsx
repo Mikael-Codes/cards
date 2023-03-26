@@ -10,12 +10,10 @@ import Card from "@components/Card";
 import Head from "next/head";
 require('dotenv').config()
 
-
 var Airtable = require('airtable');
-const a = "e81a8d240cd7e70529597b3fd3125fa83f604"
-const va = "23a60a0343b9062b171654ae123"
-const inn = "patMKg0AvjETjFVGw."
-const avain = inn+va+a
+var apiKey = 'your AirTable API key'
+
+
 
 interface Record {
     id: string;
@@ -45,7 +43,7 @@ const Home: NextPage = () => {
   const [records, setRecords] = useState<CardRecord[]>([]);
 
   useEffect(() => {
-      const base = new Airtable({ apiKey: avain }).base('app0yydtfVDd8NWa2');
+      const base = new Airtable({ apiKey: apiKey }).base('app0yydtfVDd8NWa2');
 
       base('Cards').select({
         view: 'grid',
